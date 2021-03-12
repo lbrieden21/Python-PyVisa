@@ -1,11 +1,14 @@
 #!/usr/bin/env python
-import visa
 import time
 from decimal import *
+import visa
 delay = 0.01 #delay in seconds (50 ms)
 
 rm = visa.ResourceManager('@py')
-PSU = rm.open_resource("TCPIP::192.168.9.11::INSTR")
+# print(rm.list_resources())
+# PSU = rm.open_resource("TCPIP::192.168.9.11::INSTR")
+PSU = rm.open_resource("USB::0x1AB1::0x0E11::DP8C175205811::INSTR")
+
 
 def getModel():
     return 'DP832'
@@ -48,7 +51,7 @@ def setOVP(chan,val): #define a SET VOLT PROTECTION function
     PSU.write(cmd1)
     time.sleep(delay)
     PSU.write(cmd2)
-    ttime.sleep(delay)
+    time.sleep(delay)
 
 def toggleOVP(state): #define a TOGGLE VOLTAGE PROTECTION function
     cmd1 = ':VOLT:PROT:STAT %s' %state
