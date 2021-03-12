@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 import visa
 import time
-import SDS1102 as osc
-import SDG805 as wf
+import DS2072A as osc
+import SDG2042X as wf
 import DP832 as psu
 import numpy as np
 import matplotlib.pyplot as plot

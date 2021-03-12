@@ -4,7 +4,8 @@ import time
 delay = 0.01 #delay in seconds (50 ms)
 
 rm = visa.ResourceManager()
-SCOPE = rm.open_resource('USB0::0xF4EC::0xEE3A::SDS00002140417::INSTR')
+#SCOPE = rm.open_resource('USB0::0xF4EC::0xEE3A::SDS00002140417::INSTR')
+SCOPE = rm.open_resource('TCPIP::192.168.9.10::INSTR')
 
 def measVpp(chan):
 	cmd1 = 'C%s:PAVA? PKPK' %chan
