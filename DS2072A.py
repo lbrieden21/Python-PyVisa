@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # **** NOTE - COPIED FROM SDS1102.py which is for a Siglent scope. Still needs to be adapted for the RIGOL DS2072A ****
-import visa
+import pyvisa as visa
 import time
 delay = 0.01 #delay in seconds (50 ms)
 

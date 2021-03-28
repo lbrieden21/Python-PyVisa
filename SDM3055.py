@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-import visa
+import pyvisa as visa
 import time
 delay = 0.01 #delay in seconds (50 ms)
 

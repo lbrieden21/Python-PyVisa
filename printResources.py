@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-import visa
+import pyvisa as visa
 
 rm = visa.ResourceManager()
 numEle = len(rm.list_resources())

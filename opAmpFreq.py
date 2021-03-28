@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-import visa
+import pyvisa as visa
 import time
 import math as m
 import DS2072A as osc

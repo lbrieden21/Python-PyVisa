@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-import visa
+import pyvisa as visa
 import time
 import DS2072A as osc
 import SDG2042X as wf

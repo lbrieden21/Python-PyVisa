@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import time
 from decimal import Decimal
-import visa
+import pyvisa as visa
 delay = 0.01  # delay in seconds (10 ms)
 
 rm = visa.ResourceManager('@py')
